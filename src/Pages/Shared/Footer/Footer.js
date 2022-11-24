@@ -5,9 +5,9 @@ export default function Footer() {
     <div>
         <footer className="footer footer-center p-10 bg-primary text-primary-content">
   <div>
-   
+   <img className='w-40' src="https://i.ibb.co/6n6yBMW/logo.png" alt=""  />
     <p className="font-bold">
-      Recycle Basket <br/>Providing reliable tech since 1992
+      Providing reliable tech since 1992
     </p> 
     <p>Copyright © 2022 - All right reserved</p>
   </div> 
