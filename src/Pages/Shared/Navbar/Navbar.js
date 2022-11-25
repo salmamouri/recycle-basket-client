@@ -19,9 +19,17 @@ export default function Navbar() {
       </li>
       {
         user?.uid?
+      <>
+         <li className="hover:bg-primary hover:text-primary-content">
+       <Link to="/dashboard">Dashboard</Link>
+     </li>
+        
         <li className="hover:bg-primary hover:text-primary-content">
         <button onClick={handleLogOut} className="btn btn-primary text-secondary" >Logout</button>
       </li>
+      
+      
+      </>
       :
       <li className="hover:bg-primary hover:text-primary-content">
       <Link to="/login">Login</Link>
