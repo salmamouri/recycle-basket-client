@@ -4,11 +4,12 @@ import toast from 'react-hot-toast';
 import { Link } from 'react-router-dom'
 import { AuthContext } from '../../Contexts/AuthProvider';
 import {FaGoogle} from 'react-icons/fa'
+import { GoogleAuthProvider } from 'firebase/auth';
 
 export default function SignUp() {
 
   const {register, handleSubmit, formState: {errors}}=useForm();
-  const {createUser, updateUser}=useContext(AuthContext);
+  const {createUser, updateUser, googleSignIn}=useContext(AuthContext);
 
   const handleSignUp = data =>{
     console.log(data)
@@ -19,7 +20,9 @@ export default function SignUp() {
         console.log(user);
         toast('user created successfully')
         const userInfo ={
-            displayName :data.name 
+            displayName :data.name ,
+            role:data.typeOfUser.value
+            
         };
         updateUser(userInfo)
         .then(()=>{
@@ -32,6 +35,15 @@ export default function SignUp() {
   
     })
 }   
+const provider = new GoogleAuthProvider();
+const handleGoogleSignIn = () => {
+  googleSignIn(provider)
+    .then((result) => {
+      const user = result.user;
+      console.log(user);
+    })
+    .catch((error) => console.error(error));
+};
 
   return (
     <div  className="h-[800px] flex justify-center items-center" >
@@ -73,6 +85,24 @@ export default function SignUp() {
 
 </div>
 
+<div className="form-control mt-3 w-full max-w-xs">
+  <label>Type of User</label>
+      
+      <input {...register("register")} />
+      <select {...register("typeOfUser")}>
+        <option value="buyer">Buyer</option>
+        <option value="seller">Seller</option>
+       
+      </select>
+   
+
+</div>
+
+
+
+
+
+
 
 <input className='w-full btn btn-primary font-bold text-secondary mt-5' value='Sign Up 'type="submit" />
 
@@ -85,7 +115,7 @@ export default function SignUp() {
 
 <p className='font-bold mt-5'> Already have an account? <Link className='text-secondary' to='/login'>Login</Link></p>
 <div className="divider">OR</div>
-<button className='btn btn-outline w-full hover:btn-primary hover:text-secondary hover:font-bold'> <FaGoogle className='m-1'/>  CONTINUE WITH GOOGLE</button>
+<button onClick={handleGoogleSignIn} className='btn btn-outline w-full hover:btn-primary hover:text-secondary hover:font-bold'> <FaGoogle className='m-1'/>  CONTINUE WITH GOOGLE</button>
 
     </div>
    

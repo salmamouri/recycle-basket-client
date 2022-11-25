@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useContext } from "react";
 import { Link } from "react-router-dom";
+import { AuthContext } from "../../../Contexts/AuthProvider";
 
 export default function Navbar() {
+  const {user,logOut} = useContext(AuthContext);
+  const handleLogOut = () => {
+    logOut()
+      .then(() => {})
+      .catch((error) => console.error(error));
+  };
   const menuItems = (
     <>
       <li className="hover:bg-primary hover:text-primary-content">
@@ -10,9 +17,18 @@ export default function Navbar() {
       <li className="hover:bg-primary hover:text-primary-content">
         <Link to="/blogs">Blogs</Link>
       </li>
-      <li className="hover:bg-primary hover:text-primary-content">
-        <Link to="/login">Login</Link>
+      {
+        user?.uid?
+        <li className="hover:bg-primary hover:text-primary-content">
+        <button onClick={handleLogOut} className="btn btn-primary text-secondary" >Logout</button>
       </li>
+      :
+      <li className="hover:bg-primary hover:text-primary-content">
+      <Link to="/login">Login</Link>
+    </li>
+   
+      }
+     
     </>
   );
   return (

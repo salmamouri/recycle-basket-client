@@ -1,17 +1,43 @@
-import React from 'react';
+import React, { useContext } from 'react';
 import { useForm } from 'react-hook-form';
 import { Link } from 'react-router-dom';
 import {FaGoogle} from 'react-icons/fa'
+import { AuthContext } from '../../Contexts/AuthProvider';
+import { GoogleAuthProvider } from 'firebase/auth';
 
 
 export default function Login() {
+  const {signIn,googleSignIn} = useContext(AuthContext);
 
   const {register, handleSubmit, formState: {errors}}=useForm();
+  const handleLogin = (data) => {
+    console.log(data);
+    signIn(data.email, data.password)
+      .then((result) => {
+        const user = result.user;
+        console.log(user);
+        
+      })
+      .catch((error) => {
+        console.error(error.message);
+      });
+  };
+
+  const provider = new GoogleAuthProvider();
+const handleGoogleSignIn = () => {
+  googleSignIn(provider)
+    .then((result) => {
+      const user = result.user;
+      console.log(user);
+    })
+    .catch((error) => console.error(error));
+};
+
   return (
     <div className="h-[800px] flex justify-center items-center">
     <div className=" w-96 p-7">
       <h2 className="text-xl text-center font-bold">Login</h2>
-      <form>
+      <form onSubmit={handleSubmit(handleLogin)}>
         <div className="form-control w-full max-w-xs">
           <label className="label">
             <span className="label-text">Email</span>
@@ -63,7 +89,7 @@ export default function Login() {
         </Link>
       </p>
       <div className="divider">OR</div>
-      <button className='btn btn-outline w-full hover:btn-primary hover:text-secondary hover:font-bold'> <FaGoogle className='m-1'/> CONTINUE WITH GOOGLE</button>
+      <button onClick={handleGoogleSignIn} className='btn btn-outline w-full hover:btn-primary hover:text-secondary hover:font-bold'> <FaGoogle className='m-1'/> CONTINUE WITH GOOGLE</button>
     </div>
   </div>
   )
