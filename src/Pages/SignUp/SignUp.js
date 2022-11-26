@@ -1,26 +1,34 @@
-import React, { useContext } from 'react'
+import React, { useContext, useState } from 'react'
 import { useForm } from 'react-hook-form';
-import toast from 'react-hot-toast';
-import { Link } from 'react-router-dom'
+
+import { Link, useNavigate } from 'react-router-dom'
 import { AuthContext } from '../../Contexts/AuthProvider';
 import {FaGoogle} from 'react-icons/fa'
 import { GoogleAuthProvider } from 'firebase/auth';
+import useToken from '../../Hooks/useToken/useToken';
+import toast from 'react-hot-toast';
 
 export default function SignUp() {
 
   const {register, handleSubmit, formState: {errors}}=useForm();
   const {createUser, updateUser, googleSignIn}=useContext(AuthContext);
   const provider = new GoogleAuthProvider();
+  const navigate = useNavigate();
+  const [createdUserEmail, setCreatedUserEmail] =useState('');
+  const [token] = useToken(createdUserEmail);
 
 const handleGoogleSignIn = () => {
   googleSignIn(provider)
     .then((result) => {
       const user = result.user;
       console.log(user);
+      toast.success('User Created Successfully')
     })
     .catch((error) => console.error(error));
 };
-
+if(token){
+  navigate('/');
+}
   const handleSignUp = data =>{
     console.log(data)
   
@@ -28,7 +36,7 @@ const handleGoogleSignIn = () => {
     .then(result=>{
         const user = result.user
         console.log(user);
-        toast('user created successfully')
+    
         const userInfo ={
             displayName :data.name ,
             role:data.typeOfUser.value
@@ -58,7 +66,7 @@ const saveUserToDb =(name,email,role)=>{
 })
   .then(res=>res.json())
   .then(data =>{
-    console.log('saveUser',data)
+   setCreatedUserEmail(email)
   })
 }   
 
