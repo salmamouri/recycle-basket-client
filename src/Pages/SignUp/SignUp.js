@@ -10,6 +10,16 @@ export default function SignUp() {
 
   const {register, handleSubmit, formState: {errors}}=useForm();
   const {createUser, updateUser, googleSignIn}=useContext(AuthContext);
+  const provider = new GoogleAuthProvider();
+
+const handleGoogleSignIn = () => {
+  googleSignIn(provider)
+    .then((result) => {
+      const user = result.user;
+      console.log(user);
+    })
+    .catch((error) => console.error(error));
+};
 
   const handleSignUp = data =>{
     console.log(data)
@@ -26,7 +36,7 @@ export default function SignUp() {
         };
         updateUser(userInfo)
         .then(()=>{
-        
+          saveUserToDb(data.name,data.email,userInfo.role)
         })
         .catch(err=>console.error(err))
     })
@@ -34,16 +44,25 @@ export default function SignUp() {
         console.error(error.message)
   
     })
+
+   
+}
+const saveUserToDb =(name,email,role)=>{
+  const user ={name,email,role};
+  fetch('http://localhost:5000/users',{
+    method:'POST',
+    headers:{
+      'content-type':'application/json'
+    },
+    body: JSON.stringify(user)
+})
+  .then(res=>res.json())
+  .then(data =>{
+    console.log('saveUser',data)
+  })
 }   
-const provider = new GoogleAuthProvider();
-const handleGoogleSignIn = () => {
-  googleSignIn(provider)
-    .then((result) => {
-      const user = result.user;
-      console.log(user);
-    })
-    .catch((error) => console.error(error));
-};
+
+
 
   return (
     <div  className="h-[800px] flex justify-center items-center" >
