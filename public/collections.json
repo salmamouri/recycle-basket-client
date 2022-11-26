@@ -1,0 +1,18 @@
+[
+    {  "collection_id":"1",   
+        "title":"Women",
+        "img":"https://i.ibb.co/DCxfByP/women.png"
+       
+    },
+    {   "collection_id":"2",
+        "title":"Man",
+        "img":"https://i.ibb.co/S0SKj4R/man.png"
+        
+    },
+    {   "collection_id":"3",
+        "title":"Baby",
+         "img":"https://i.ibb.co/g706xvX/baby.jpg"
+        
+    }
+]
+    

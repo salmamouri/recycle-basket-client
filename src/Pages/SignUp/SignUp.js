@@ -6,6 +6,8 @@ import { AuthContext } from '../../Contexts/AuthProvider';
 import {FaGoogle} from 'react-icons/fa'
 import { GoogleAuthProvider } from 'firebase/auth';
 import useToken from '../../Hooks/useToken/useToken';
+
+import { data } from 'autoprefixer';
 import toast from 'react-hot-toast';
 
 export default function SignUp() {
@@ -44,7 +46,7 @@ if(token){
         };
         updateUser(userInfo)
         .then(()=>{
-          saveUserToDb(data.name,data.email,userInfo.role)
+          
         })
         .catch(err=>console.error(err))
     })
@@ -52,6 +54,7 @@ if(token){
         console.error(error.message)
   
     })
+    saveUserToDb(data.name,data.email, data.typeOfUser)
 
    
 }
@@ -66,6 +69,7 @@ const saveUserToDb =(name,email,role)=>{
 })
   .then(res=>res.json())
   .then(data =>{
+    console.log("I love you ", data)
    setCreatedUserEmail(email)
   })
 }   
