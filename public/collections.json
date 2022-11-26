@@ -1,18 +1,171 @@
 [
     {  "collection_id":"1",   
         "title":"Women",
-        "img":"https://i.ibb.co/DCxfByP/women.png"
+        "name":"Top",
+        "img":" https://i.ibb.co/fkqGK9K/w-top.jpg",
+        "location":"Vatara,Dhaka",
+        "original_price":"1800",
+        "resale_price":"700",
+        "used": "10 months",
+        "posted":"10 pm on 22 November"
+       
+    },
+    {   "collection_id":"1",
+        "title":"Woman",
+        "name":"Blue Jacket",
+        "img":"https://i.ibb.co/gDKqb8Z/w-bluejacket.jpg",
+        "location":"Adabor,Dhaka",
+        "original_price":"3000",
+        "resale_price":"1500",
+        "used": "1 year",
+        "posted":"7 pm on 22 May"
+        
+    },
+    {   "collection_id":"1",
+        "title":"Woman",
+        "name":"Tee",
+         "img":"https://i.ibb.co/2hzcyqh/w-tee.jpg",
+         "location":"Khilgaon,Dhaka",
+         "original_price":"1200",
+         "resale_price":"800",
+         "used": "10 months",
+         "posted":"11.30 pm on 16 Janury"
+        
+    },
+    {   "collection_id":"1",
+        "title":"Woman",
+        "name":"Frock",
+         "img":"https://i.ibb.co/BGctFJj/frock.jpg",
+         "location":"Adabor,Dhaka",
+        "original_price":"2800",
+        "resale_price":"1500",
+        "used": "11 months",
+        "posted":"4.30 pm on 11 May"
+        
+    },
+    {  "collection_id":"1",   
+        "title":"Women",
+        "name":"Pant",
+        "img":"https://i.ibb.co/pRtQwJB/w-pamt.jpg",
+        "location":"Farmgate,Dhaka",
+        "original_price":"1800",
+        "resale_price":"900",
+        "used": "2 years",
+        "posted":"11.30 am on 14 april"
+       
+    },
+    {   "collection_id":"1",
+        "title":"Woman",
+        "name":"JumpSuit",
+        "img":"https://i.ibb.co/Hg1wdRT/w-jumpsuit.jpg",
+        "location":"Mohammadpur,Dhaka",
+        "original_price":"2800",
+        "resale_price":"1500",
+        "used": "5 months",
+        "posted":"9.30 pm on 22 Janury"
+        
+    },
+    {   "collection_id":"1",
+        "title":"Woman",
+        "name":"Coat",
+         "img":"https://i.ibb.co/BC9zz5T/w-coat.jpg",
+         "location":"Badda,Dhaka",
+        "original_price":"3800",
+        "resale_price":"2000",
+        "used": "10 months",
+        "posted":"11.30 pm on 16 Janury"
+        
+    },
+    {  "collection_id":"2",   
+        "title":"Man",
+        "name":"Shirt",
+        "img":"https://i.ibb.co/fXgxFhq/men-shirt.jpg",
+        "location":"Uttara,Dhaka",
+        "original_price":"2800",
+        "resale_price":"1300",
+        "used": "8 months",
+        "posted":"8 pm on 09 March"
+        
        
     },
     {   "collection_id":"2",
         "title":"Man",
-        "img":"https://i.ibb.co/S0SKj4R/man.png"
+        "name":"TShirt",
+        "img":"https://i.ibb.co/wdvVZt0/m-tshirt.jpg",
+        "location":"Azimpur,Dhaka",
+        "original_price":"800",
+        "resale_price":"300",
+        "used": "5 months",
+        "posted":"3.30 pm on 07 February"
+        
+    },
+    {   "collection_id":"2",
+        "title":"Man",
+        "name":"Jacket",
+         "img":"https://i.ibb.co/ZNz3CRG/jeans-jacket.jpg",
+         "location":"Dhanmondi,Dhaka",
+        "original_price":"2800",
+        "resale_price":"1500",
+        "used": "2 years",
+        "posted":"3 pm on 28 November"
+        
+    },
+    {  "collection_id":"2",   
+        "title":"Man",
+        "name":"Pant",
+        "img":"https://i.ibb.co/smSFtjj/pant.jpg",
+        "location":"Mirpur,Dhaka",
+        "original_price":"1800",
+        "resale_price":"900",
+        "used": "11 months",
+        "posted":"11 pm on 17 July"
+       
+    },
+    {   "collection_id":"3",
+        "title":"Baby",
+        "name":"Frock",
+        "img":"https://i.ibb.co/znSz3tB/baby-frock.jpg",
+        "location":"Adabor,Dhaka",
+        "original_price":"3200",
+        "resale_price":"1200",
+        "used": "1.5 years",
+        "posted":"5 pm on 19 June"
         
     },
     {   "collection_id":"3",
         "title":"Baby",
-         "img":"https://i.ibb.co/g706xvX/baby.jpg"
+        "name":"Hoodie",
+         "img":"https://i.ibb.co/kgQ5XPP/baby-hoodie.jpg",
+         "location":"Adabor,Dhaka",
+        "original_price":"1200",
+        "resale_price":"600",
+        "used": "15 months",
+        "posted":"9.30 am on 12 August"
+        
+    },
+    {   "collection_id":"3",
+        "title":"Baby",
+        "name":"JumpSuit",
+        "img":"https://i.ibb.co/5cChPNk/baby-jumpsuit.jpg",
+        "location":"Green Road,Dhaka",
+        "original_price":"1500",
+        "resale_price":"700",
+        "used": "5 months",
+        "posted":"8.30 pm on 05 April"
+        
+    },
+    {   "collection_id":"3",
+        "title":"Baby",
+        "name":"Baby set",
+         "img":"https://i.ibb.co/5xpQF3Z/baby-set.jpg",
+         "location":"Shyamoli,Dhaka",
+        "original_price":"2000",
+        "resale_price":"900",
+        "used": " 2 years",
+        "posted":"10 am on 12 September"
         
     }
+
+   
 ]
     

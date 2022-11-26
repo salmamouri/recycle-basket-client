@@ -1,7 +1,8 @@
 import React from 'react'
+import { Link } from 'react-router-dom';
 
 export default function CollectionCard({collection}) {
-  const {img,title}= collection;
+  const {img,title,collection_id}= collection;
   return (
     <div>
       <div className="card w-96 bg-base-100 shadow-xl">
@@ -10,7 +11,9 @@ export default function CollectionCard({collection}) {
     <h2 className="text-center font-bold text-secondary">{title}</h2>
     
     <div className="card-actions justify-center">
-      <button className="btn btn-primary">Buy Now</button>
+      <button className="btn btn-primary">
+        <Link to={`/products/${collection_id}`}>Buy Now</Link>
+      </button>
     </div>
   </div>
 </div>
