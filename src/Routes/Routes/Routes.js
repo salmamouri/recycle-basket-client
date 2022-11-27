@@ -12,6 +12,7 @@ import MyOrders from "../../Pages/Dashboard/MyOrders/MyOrders";
 import MyProducts from "../../Pages/Dashboard/MyProducts/MyProducts";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
+import NotFound from "../../Pages/NotFoundPage/NotFound";
 import SignUp from "../../Pages/SignUp/SignUp";
 import PrivateRoute from "../PrivateRoute/PrivateRoute";
 
@@ -36,6 +37,14 @@ export const router = createBrowserRouter([
                 loader:({params})=>fetch(`http://localhost:5000/products/${params.title}`),
             },
             
+            {
+                path:'/blogs',
+                element:<Blogs></Blogs>
+            },
+            {
+                path:'*',
+                element:<NotFound></NotFound>
+            },
             {
                 path:'/blogs',
                 element:<Blogs></Blogs>

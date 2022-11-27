@@ -2,7 +2,7 @@ import React, { useContext } from 'react'
 import { AuthContext } from '../../../Contexts/AuthProvider';
 
 export default function BookingModal({clothe, setClothe}) {
-    const {}=clothe;
+    
      const {user} = useContext(AuthContext);
   
     const handleBooking = (event) => {
@@ -47,7 +47,7 @@ export default function BookingModal({clothe, setClothe}) {
                 <input
                   name="name"
                   type="text"
-                  defaultValue={name}
+             
                   className="input w-full input-bordered "
                 />
                 <input
