@@ -1,13 +1,24 @@
-import React, { useContext } from 'react';
+import React, { useContext, useState } from 'react';
 import { useForm } from 'react-hook-form';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import {FaGoogle} from 'react-icons/fa'
 import { AuthContext } from '../../Contexts/AuthProvider';
 import { GoogleAuthProvider } from 'firebase/auth';
+import useToken from '../../Hooks/useToken/useToken';
 
 
 export default function Login() {
   const {signIn,googleSignIn} = useContext(AuthContext);
+
+  const [loginUserEmail,setLoginUserEmail] = useState('');
+  const location = useLocation();
+  const [token] = useToken(loginUserEmail);
+  const navigate = useNavigate();
+  const from = location.state?.from?.pathname || "/";
+
+  if(token){
+    navigate(from, { replace: true });
+  }
 
   const {register, handleSubmit, formState: {errors}}=useForm();
   const handleLogin = (data) => {
@@ -15,7 +26,8 @@ export default function Login() {
     signIn(data.email, data.password)
       .then((result) => {
         const user = result.user;
-        console.log(user);
+       console.log(user);
+        setLoginUserEmail(data.email);
         
       })
       .catch((error) => {

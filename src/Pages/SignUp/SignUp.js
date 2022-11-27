@@ -8,7 +8,9 @@ import { GoogleAuthProvider } from 'firebase/auth';
 import useToken from '../../Hooks/useToken/useToken';
 
 import { data } from 'autoprefixer';
-import toast from 'react-hot-toast';
+import { toast } from 'react-toastify';
+
+
 
 export default function SignUp() {
 
@@ -19,12 +21,15 @@ export default function SignUp() {
   const [createdUserEmail, setCreatedUserEmail] =useState('');
   const [token] = useToken(createdUserEmail);
 
+  const notify = () => toast.success("User Succesfully Created",{
+    position: toast.POSITION.TOP_CENTER});
+
 const handleGoogleSignIn = () => {
   googleSignIn(provider)
     .then((result) => {
       const user = result.user;
       console.log(user);
-      toast.success('User Created Successfully')
+      
     })
     .catch((error) => console.error(error));
 };
@@ -125,17 +130,9 @@ const saveUserToDb =(name,email,role)=>{
         <option value="seller">Seller</option>
        
       </select>
-   
+   </div>
 
-</div>
-
-
-
-
-
-
-
-<input className='w-full btn btn-primary font-bold text-secondary mt-5' value='Sign Up 'type="submit" />
+<input onClick={notify} className='w-full btn btn-primary font-bold text-secondary mt-5' value='Sign Up 'type="submit" />
 
 {/* <div className="">
         {

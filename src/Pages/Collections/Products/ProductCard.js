@@ -1,7 +1,8 @@
 import React from 'react'
+import BookingModal from './BookingModal';
 
-export default function ProductCard({product}) {
-    const{name,img,resale_price,original_price,location,used,posted}=product;
+export default function ProductCard() {
+    const{name,img,resale_price,original_price,location,used,posted,}=product;
   
   return (
 
@@ -18,7 +19,15 @@ export default function ProductCard({product}) {
     <h3>Posted:{posted}</h3>
     
     <div className="card-actions">
-      <button className="btn btn-primary my-5">Book Now</button>
+      
+       <label
+        htmlFor="booking-modal" className="btn btn-primary my-5 ">Book Now</label> 
+
+{ 
+            <BookingModal
+            clothes={product}
+            ></BookingModal> 
+        }
     </div>
   </div>
 </div>
