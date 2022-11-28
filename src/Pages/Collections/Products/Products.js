@@ -6,9 +6,9 @@ import ProductCard from './ProductCard';
 export default function Products() {
   const [clothe, setClothe] = useState(null);
   const [products, setProducts] = useState([]);
-  let { title } = useParams();
+  let { category } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${title}`)
+    fetch(`http://localhost:5000/products/${category}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

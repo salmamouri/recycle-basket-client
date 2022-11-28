@@ -13,7 +13,7 @@ export default function DashboardLayout() {
     .then(data => setLoggedUser(data))
   },[])
 
-  console.log('love',loggedUser);
+  // console.log('love',loggedUser);
 
   return (
     <div>
@@ -32,20 +32,22 @@ export default function DashboardLayout() {
              
                 { loggedUser.role === 'buyer' ?
                   <>
-                   <li>
+                  <li>
+                   <Link to='/dashboard/myorders'>My Orders</Link>
+                   </li>
+                  </> :
+                   loggedUser.role === "seller" ?
+                 <>
+                    <li>
                    <Link to='/dashboard/addproduct'>Add Products</Link>
                    </li>
                     <li>
                    <Link to='/dashboard/myproducts'>My products</Link>
-                   </li></> :
-                   loggedUser.role === "seller" ?
-                 <>
-                   <li>
-                   <Link to='/dashboard/myorders'>My Orders</Link>
                    </li>
                    </>
                    :
-                   <>
+           
+                   <> 
                     <li>
                    <Link to='/dashboard/allsellers'>All Sellers</Link>
                    </li>

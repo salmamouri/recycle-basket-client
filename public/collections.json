@@ -1,6 +1,6 @@
 [
     {  "collection_id":"1",   
-        "title":"Women",
+        "category":"Women",
         "name":"Top",
         "img":" https://i.ibb.co/fkqGK9K/w-top.jpg",
         "location":"Vatara,Dhaka",
@@ -11,7 +11,7 @@
        
     },
     {   "collection_id":"1",
-        "title":"Woman",
+        "category":"Woman",
         "name":"Blue Jacket",
         "img":"https://i.ibb.co/gDKqb8Z/w-bluejacket.jpg",
         "location":"Adabor,Dhaka",
@@ -22,7 +22,7 @@
         
     },
     {   "collection_id":"1",
-        "title":"Woman",
+        "category":"Woman",
         "name":"Tee",
          "img":"https://i.ibb.co/2hzcyqh/w-tee.jpg",
          "location":"Khilgaon,Dhaka",
@@ -33,7 +33,7 @@
         
     },
     {   "collection_id":"1",
-        "title":"Woman",
+        "category":"Woman",
         "name":"Frock",
          "img":"https://i.ibb.co/BGctFJj/frock.jpg",
          "location":"Adabor,Dhaka",
@@ -44,7 +44,7 @@
         
     },
     {  "collection_id":"1",   
-        "title":"Women",
+        "category":"Women",
         "name":"Pant",
         "img":"https://i.ibb.co/pRtQwJB/w-pamt.jpg",
         "location":"Farmgate,Dhaka",
@@ -55,7 +55,7 @@
        
     },
     {   "collection_id":"1",
-        "title":"Woman",
+        "category":"Woman",
         "name":"JumpSuit",
         "img":"https://i.ibb.co/Hg1wdRT/w-jumpsuit.jpg",
         "location":"Mohammadpur,Dhaka",
@@ -66,7 +66,7 @@
         
     },
     {   "collection_id":"1",
-        "title":"Woman",
+        "category":"Woman",
         "name":"Coat",
          "img":"https://i.ibb.co/BC9zz5T/w-coat.jpg",
          "location":"Badda,Dhaka",
@@ -77,7 +77,7 @@
         
     },
     {  "collection_id":"2",   
-        "title":"Man",
+        "category":"Man",
         "name":"Shirt",
         "img":"https://i.ibb.co/fXgxFhq/men-shirt.jpg",
         "location":"Uttara,Dhaka",
@@ -89,7 +89,7 @@
        
     },
     {   "collection_id":"2",
-        "title":"Man",
+        "category":"Man",
         "name":"TShirt",
         "img":"https://i.ibb.co/wdvVZt0/m-tshirt.jpg",
         "location":"Azimpur,Dhaka",
@@ -100,7 +100,7 @@
         
     },
     {   "collection_id":"2",
-        "title":"Man",
+        "category":"Man",
         "name":"Jacket",
          "img":"https://i.ibb.co/ZNz3CRG/jeans-jacket.jpg",
          "location":"Dhanmondi,Dhaka",
@@ -111,7 +111,7 @@
         
     },
     {  "collection_id":"2",   
-        "title":"Man",
+        "category":"Man",
         "name":"Pant",
         "img":"https://i.ibb.co/smSFtjj/pant.jpg",
         "location":"Mirpur,Dhaka",
@@ -122,7 +122,7 @@
        
     },
     {   "collection_id":"3",
-        "title":"Baby",
+        "category":"Baby",
         "name":"Frock",
         "img":"https://i.ibb.co/znSz3tB/baby-frock.jpg",
         "location":"Adabor,Dhaka",
@@ -133,7 +133,7 @@
         
     },
     {   "collection_id":"3",
-        "title":"Baby",
+        "category":"Baby",
         "name":"Hoodie",
          "img":"https://i.ibb.co/kgQ5XPP/baby-hoodie.jpg",
          "location":"Adabor,Dhaka",
@@ -144,7 +144,7 @@
         
     },
     {   "collection_id":"3",
-        "title":"Baby",
+        "category":"Baby",
         "name":"JumpSuit",
         "img":"https://i.ibb.co/5cChPNk/baby-jumpsuit.jpg",
         "location":"Green Road,Dhaka",
@@ -155,7 +155,7 @@
         
     },
     {   "collection_id":"3",
-        "title":"Baby",
+        "category":"Baby",
         "name":"Baby set",
          "img":"https://i.ibb.co/5xpQF3Z/baby-set.jpg",
          "location":"Shyamoli,Dhaka",

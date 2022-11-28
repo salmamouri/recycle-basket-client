@@ -32,9 +32,9 @@ export const router = createBrowserRouter([
                 
             },
             {
-                path:'/products/:title',
+                path:'/products/:category',
                 element:<Products></Products>,
-                loader:({params})=>fetch(`http://localhost:5000/products/${params.title}`),
+                loader:({params})=>fetch(`http://localhost:5000/products/${params.category}`),
             },
             
             {

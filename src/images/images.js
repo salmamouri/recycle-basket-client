@@ -18,3 +18,5 @@
 // https://i.ibb.co/S0SKj4R/man.png
 //https://i.ibb.co/DCxfByP/women.png
 
+//https://i.ibb.co/N9K1y94/baby-hoodie.png
+//https://i.ibb.co/Wyby3X0/hoodie.png
