@@ -46,7 +46,7 @@ export default function DashboardLayout() {
                    </li>
                    </>
                    :
-           
+                   loggedUser.role === "admin" &&
                    <> 
                     <li>
                    <Link to='/dashboard/allsellers'>All Sellers</Link>

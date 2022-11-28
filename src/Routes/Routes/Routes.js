@@ -87,7 +87,8 @@ export const router = createBrowserRouter([
         },
         {
             path:'/dashboard/allsellers',
-            element:<AllSellers></AllSellers>
+            element:<AllSellers></AllSellers>,
+            
         },
         {
             path:'/dashboard/allbuyers',

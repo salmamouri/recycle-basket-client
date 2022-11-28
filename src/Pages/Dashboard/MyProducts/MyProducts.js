@@ -10,6 +10,8 @@ export default function MyProducts() {
     .then(res=>res.json())
     .then(data => setClothes(data))
   },[])
+
+  
   const deleteProduct =(clothe)=>{
     fetch(`http://localhost:5000/product/${clothe._id}`,{
       method:'DELETE',
@@ -21,9 +23,6 @@ export default function MyProducts() {
     })
     .then(data => {
       console.log(data);
-        if(data.deletedCount > 0){
-            toast.success(` deleted successfully`)
-        }
     })
   }
   return (
