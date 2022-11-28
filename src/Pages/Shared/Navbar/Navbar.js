@@ -25,7 +25,7 @@ export default function Navbar() {
      </li>
         
         <li className="hover:bg-primary hover:text-primary-content">
-        <button onClick={handleLogOut} className="btn btn-primary text-secondary" >Logout</button>
+       <Link to='/'> <button onClick={handleLogOut} className="btn btn-primary text-secondary" >Logout</button></Link>
       </li>
       
       

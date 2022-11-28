@@ -10,6 +10,7 @@ import AllSellers from "../../Pages/Dashboard/AllSellers/AllSellers";
 import Dashboard from "../../Pages/Dashboard/Dashboard/Dashboard";
 import MyOrders from "../../Pages/Dashboard/MyOrders/MyOrders";
 import MyProducts from "../../Pages/Dashboard/MyProducts/MyProducts";
+import Payment from "../../Pages/Dashboard/Payment/Payment";
 import Home from "../../Pages/Home/Home";
 import Login from "../../Pages/Login/Login";
 import NotFound from "../../Pages/NotFoundPage/NotFound";
@@ -92,6 +93,11 @@ export const router = createBrowserRouter([
             path:'/dashboard/allbuyers',
             element:<AllBuyers></AllBuyers>
         },
+        {
+            path:'/dashboard/payment/:id',
+            element:<Payment></Payment>,
+            loader:({params})=>fetch(`http://localhost:5000/bookings/${params.id}`)
+        }
      ]
    }
 ])
