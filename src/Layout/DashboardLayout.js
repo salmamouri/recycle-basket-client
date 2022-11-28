@@ -8,7 +8,7 @@ export default function DashboardLayout() {
   const {user} = useContext(AuthContext);
   const [loggedUser, setLoggedUser]= useState({});
   useEffect(()=>{
-    fetch(`http://localhost:5000/users/${user.email}`)
+    fetch(`https://recycle-basket-server.vercel.app/users/${user.email}`)
     .then(res => res.json())
     .then(data => setLoggedUser(data))
   },[])

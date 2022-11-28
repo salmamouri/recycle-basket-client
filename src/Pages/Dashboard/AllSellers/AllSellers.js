@@ -4,13 +4,13 @@ import React, { useEffect, useState } from 'react'
 export default function AllSellers() {
  const [sellers,setSellers] = useState();
  useEffect(()=>{
-  fetch('http://localhost:5000/user/seller')
+  fetch('https://recycle-basket-server.vercel.app/user/seller')
   .then(res=>res.json())
   .then(data=>setSellers(data))
  },[])
 
  const deleteSeller =(seller)=>{
-  fetch(`http://localhost:5000/user/${seller._id}`,{
+  fetch(`https://recycle-basket-server.vercel.app/user/${seller._id}`,{
     method:'DELETE',
 
   })

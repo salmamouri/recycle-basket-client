@@ -6,14 +6,14 @@ export default function MyProducts() {
   const {user}= useContext(AuthContext);
   const [clothes,setClothes]=useState();
   useEffect(()=>{
-    fetch(`http://localhost:5000/product?email=${user?.email}`)
+    fetch(`https://recycle-basket-server.vercel.app/product?email=${user?.email}`)
     .then(res=>res.json())
     .then(data => setClothes(data))
   },[])
 
-  
+
   const deleteProduct =(clothe)=>{
-    fetch(`http://localhost:5000/product/${clothe._id}`,{
+    fetch(`https://recycle-basket-server.vercel.app/product/${clothe._id}`,{
       method:'DELETE',
 
     })

@@ -6,7 +6,7 @@ import CollectionCard from './CollectionCard/CollectionCard';
 export default function Collections() {
     const [allCollection,setAllCollection] = useState();
     useEffect(() =>{
-        fetch('http://localhost:5000/collections')
+        fetch('https://recycle-basket-server.vercel.app/collections')
         .then(res=>res.json())
         .then(data => setAllCollection(data))
     },[])

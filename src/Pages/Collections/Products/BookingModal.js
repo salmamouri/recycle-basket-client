@@ -27,7 +27,7 @@ export default function BookingModal({ clothe, setClothe }) {
      
 };
 
-    fetch('http://localhost:5000/bookings',{
+    fetch('https://recycle-basket-server.vercel.app/bookings',{
       method:"POST",
       headers:{
           'content-type':'application/json'

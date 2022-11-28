@@ -8,7 +8,7 @@ export default function Products() {
   const [products, setProducts] = useState([]);
   let { category } = useParams();
   useEffect(() => {
-    fetch(`http://localhost:5000/products/${category}`)
+    fetch(`https://recycle-basket-server.vercel.app/products/${category}`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);

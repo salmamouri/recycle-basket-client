@@ -6,7 +6,7 @@ export default function MyOrders() {
   const {user}=useContext(AuthContext);
   const [bookings,setBookings]=useState();
   useEffect(()=>{
-    fetch(`http://localhost:5000/booking?email=${user.email}`)
+    fetch(`https://recycle-basket-server.vercel.app/booking?email=${user.email}`)
     .then(res=>res.json())
     .then(data => setBookings(data))
   },[])

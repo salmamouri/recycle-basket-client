@@ -65,7 +65,7 @@ if(token){
 }
 const saveUserToDb =(name,email,role)=>{
   const user ={name,email,role};
-  fetch('http://localhost:5000/users',{
+  fetch('https://recycle-basket-server.vercel.app/users',{
     method:'POST',
     headers:{
       'content-type':'application/json'
